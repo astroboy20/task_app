@@ -41,7 +41,7 @@ const Hero = () => {
           </button>
         </div>
         <Image
-          src={"/images/hero.png"}
+          src={"/images/Hero.png"}
           width={377}
           height={378.14}
           alt="hero-image"
