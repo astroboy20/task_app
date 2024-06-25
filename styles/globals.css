@@ -32,31 +32,15 @@
   pointer-events: none; /* Ensure it does not interfere with interactions */
 }
 
-.custom-border-image {
-  position: relative;
-  width: 300px; /* Adjust the size as needed */
-  height: 300px; /* Adjust the size as needed */
-  border-radius: 50%;
-  background-color: #072951;
-}
-.custom-border-image::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 250px; /* Adjust the size as needed */
-  height: 250px; /* Adjust the size as needed */
-  border-radius: 50%;
-  background-color: white;
-}
-.custom-border-image img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 240px; /* Adjust the size as needed */
-  height: 240px; /* Adjust the size as needed */
-  border-radius: 50%;
-  object-fit: cover;
-}
+
+@layer utilities {
+      /* Hide scrollbar for Chrome, Safari and Opera */
+      .no-scrollbar::-webkit-scrollbar {
+          display: none;
+      }
+     /* Hide scrollbar for IE, Edge and Firefox */
+      .no-scrollbar {
+          -ms-overflow-style: none;  /* IE and Edge */
+          scrollbar-width: none;  /* Firefox */
+    }
+  }

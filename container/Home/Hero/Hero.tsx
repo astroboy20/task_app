@@ -11,7 +11,7 @@ const Hero = () => {
       <header className="flex items-center justify-between">
         <h1 className="text-[28px] text-white font-[800]">TECHNEW</h1>
         <div className="flex-auto flex justify-center">
-          <div className="flex space-x-4 text-white text-[20px]">
+          <div className="flex space-x-[40px] text-white text-[20px]">
             <p
               className={`cursor-pointer ${
                 pathname === "/" ? "text-[#4393D8] " : ""
@@ -33,10 +33,10 @@ const Hero = () => {
       </header>
       <div className="flex justify-between items-center">
         <div className="flex flex-col gap-[30px] ">
-          <h1 className="text-[48px] text-white font-[500] leading-[50px]">
+          <h1 className="text-[44px] text-white font-[500] leading-[50px]">
             Get the best knowledge <br /> from our Versatile Tutors
           </h1>
-          <button className="text-[28px] bg-white font-[600] text-[#051B35] rounded-[12px] w-fit px-[20px] py-[10px]">
+          <button className="text-[24px] bg-white font-[600] text-[#051B35] rounded-[12px] w-fit px-[20px] py-[10px]">
             Start learning!
           </button>
         </div>

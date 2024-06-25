@@ -1,6 +1,8 @@
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import { Montserrat } from "next/font/google";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -12,12 +14,13 @@ const montserrat = Montserrat({
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
-      <style>{`
-      html{
-        font-family:${montserrat.style.fontFamily}
-      }
-    `}</style>
+      <style jsx global>{`
+        html {
+          font-family: ${montserrat.style.fontFamily};
+        }
+      `}</style>
       <Component {...pageProps} />
+      <ToastContainer />
     </>
   );
 }
