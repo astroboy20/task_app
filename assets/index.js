@@ -27,3 +27,31 @@ export const RightArrow = () => (
     />
   </svg>
 );
+
+export const MoreIcon = () => (
+  <svg
+    width="60"
+    height="60"
+    viewBox="0 0 60 60"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <circle cx="30" cy="30" r="24" fill="#072951" />
+    <mask
+      id="mask0_0_122"
+      maskUnits="userSpaceOnUse"
+      x="19"
+      y="18"
+      width="22"
+      height="24"
+    >
+      <rect x="19" y="18.5926" width="22" height="22.8148" fill="#D9D9D9" />
+    </mask>
+    <g mask="url(#mask0_0_122)">
+      <path
+        d="M35.5102 31.2222H20.6296V28.7778H35.5102L28.6658 21.9333L30.4074 20.2222L40.1852 30L30.4074 39.7778L28.6658 38.0667L35.5102 31.2222Z"
+        fill="white"
+      />
+    </g>
+  </svg>
+);

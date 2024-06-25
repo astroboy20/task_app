@@ -7,13 +7,56 @@
     --foreground-rgb: 0, 0, 0;
     --background-start-rgb: 214, 219, 220;
     --background-end-rgb: 255, 255, 255;
-    --primary:#072951;
+    --primary: #072951;
   }
 }
 
+/* styles.css or global.css */
 .custom-border {
-  border-image-source: linear-gradient(180deg, #FF9900 0%, #072951 100%);
-  border-image-slice: 1;
-  border-radius: 1rem;
+  position: relative;
+  border-radius: 28px; /* Adjust as needed */
+  overflow: hidden;
 }
 
+.custom-border::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 4px solid transparent;
+  border-image-source: linear-gradient(180deg, #ff9900 0%, #072951 100%);
+  border-image-slice: 1;
+  border-radius: inherit; /* Ensure the pseudo-element inherits the border-radius */
+  pointer-events: none; /* Ensure it does not interfere with interactions */
+}
+
+.custom-border-image {
+  position: relative;
+  width: 300px; /* Adjust the size as needed */
+  height: 300px; /* Adjust the size as needed */
+  border-radius: 50%;
+  background-color: #072951;
+}
+.custom-border-image::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 250px; /* Adjust the size as needed */
+  height: 250px; /* Adjust the size as needed */
+  border-radius: 50%;
+  background-color: white;
+}
+.custom-border-image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 240px; /* Adjust the size as needed */
+  height: 240px; /* Adjust the size as needed */
+  border-radius: 50%;
+  object-fit: cover;
+}
